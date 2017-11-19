@@ -59,7 +59,7 @@ class ac_token
 				$token = $token['access_token'];
 			}else{ //已过期
 				// 重新获取access_token
-				$token = this::get_token();
+				$token = self::get_token();
 				if ($token['access_token']) {
 					$token = $token['access_token'];
 				}else{
@@ -68,7 +68,7 @@ class ac_token
 			}
 		}else{ //不存在记录文件
 			// 获取access_token
-			$token = this::get_token();
+			$token = self::get_token();
 			if ($token['access_token']) {
 				$token = $token['access_token'];
 			}else{
