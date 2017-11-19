@@ -53,7 +53,7 @@ class ac_token
 			}
 			fclose($token_file);
 			// 处理内容
-			$token = json_decode($token);
+			$token = json_decode($token, TRUE);
 			$time_end = $token['timestamp'] + $token['expires_in'];
 			if ($time_end > time()) { //未过期
 				$token = $token['access_token'];

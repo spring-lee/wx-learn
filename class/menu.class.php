@@ -25,7 +25,7 @@ class menu
 		curl_setopt($curl, CURLOPT_POST, 1);
 		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 		// 执行curl
-		$rst = json_decode(curl_exec($curl));
+		$rst = json_decode(curl_exec($curl), TRUE);
 		// 关闭curl
 		curl_close($curl);
 
