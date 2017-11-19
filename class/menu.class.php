@@ -8,7 +8,7 @@ class menu
 	/**
 	 * 设置菜单
 	 */
-	public static function set_nemu($data)
+	public static function set_menu($data)
 	{
 		// 读取access_token
 		$token = ac_token::read_token();
