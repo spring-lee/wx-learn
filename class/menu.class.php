@@ -1,5 +1,5 @@
 <?php 
-require_once(dirname(dirname(__FILE__)).'/auto_laod.php');
+require_once(dirname(dirname(__FILE__)).'/auto_load.php');
 /**
 * 菜单类
 */
