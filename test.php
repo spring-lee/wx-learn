@@ -1,4 +1,23 @@
 <?php 
-require_once(dirname(__FILE__).'/auto_load.php');
+require_once('auto_load.php');
 
-ac_token::get_token();
+$data = array(
+		'button'=>array(
+				array(
+					'type'=>'view',
+					'name'=>'testLink1',
+					'url'=>'http://www.baidu.com/'
+				),
+				array(
+					'type'=>'view',
+					'name'=>'testLink2',
+					'url'=>'http://www.baidu.com/'
+				),
+				array(
+					'type'=>'view',
+					'name'=>'testLink3',
+					'url'=>'http://www.baidu.com/'
+				)
+			)
+	);
+menu::set_menu(json_encode($data));
