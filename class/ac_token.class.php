@@ -47,7 +47,7 @@ class ac_token
 		if (file_exists(dirname(dirname(__FILE__)).'/ac_token.txt')) { //存在记录文件
 			// 读取文件内容		
 			$token_file = fopen(dirname(dirname(__FILE__)).'/ac_token.txt', 'r');
-			$token;
+			$token = "";
 			while (!feof($token_file)) {
 				$token .= fgets($token_file);
 			}
