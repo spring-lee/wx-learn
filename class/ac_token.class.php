@@ -48,7 +48,7 @@ class ac_token
 			// 读取文件内容		
 			$token_file = fopen(dirname(dirname(__FILE__)).'/ac_token.txt', 'r');
 			while (!feof($token_file)) {
-				$token .= fgets($token);
+				$token .= fgets($token_file);
 			}
 			fclose($token_file);
 			// 处理内容
