@@ -56,7 +56,6 @@ class message
        <CreateTime>%s</CreateTime> 
        <MsgType><![CDATA[%s]]></MsgType> 
        <Content><![CDATA[%s]]></Content> 
-       <FuncFlag>0</FuncFlag> 
        </xml>";
 
        $send = sprintf($send, $to_user_name, $from_user_name, $create_time, $msg_type, $content);
