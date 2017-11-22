@@ -31,6 +31,9 @@ class message
 						break;
 				}
 				break;
+			case 'text':
+				$this->subscribe();
+				break;
 		}
 	}
 
