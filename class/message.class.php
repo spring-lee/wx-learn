@@ -32,7 +32,7 @@ class message
 				}
 				break;
 			case 'text':
-				$this->subscribe();
+				echo "success";
 				break;
 		}
 	}
