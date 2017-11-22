@@ -22,7 +22,7 @@ class ac_token
 		// 关闭curl
 		curl_close($curl);
 
-		// 处理返回结果
+		// 处理并返回结果
 		if ($token['access_token']) { //正确返回
 			//记录获取token时间戳
 			$token['timestamp'] = time();
