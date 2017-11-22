@@ -32,8 +32,8 @@ class message
 				}
 				break;
 			case 'text':
-				// $this->subscribe();
-				echo "success";
+				$this->subscribe();
+				// echo "success";
 				break;
 		}
 	}
@@ -58,6 +58,7 @@ class message
 		<Content><![CDATA[{$content}]]></Content>
 		</xml>";
 
-		echo $send;
+		// echo $send;
+		echo "success";
 	}
 }
