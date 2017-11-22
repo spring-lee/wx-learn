@@ -50,19 +50,16 @@ class message
 		$msg_type = 'text';
 		$content = '感谢您的关注\^_^/';
 
-		$send = "<xml>
+		$send = "<xml> 
+       <ToUserName><![CDATA[%s]]></ToUserName> 
+       <FromUserName><![CDATA[%s]]></FromUserName> 
+       <CreateTime>%s</CreateTime> 
+       <MsgType><![CDATA[%s]]></MsgType> 
+       <Content><![CDATA[%s]]></Content> 
+       <FuncFlag>0</FuncFlag> 
+       </xml>";
 
-<ToUserName><![CDATA[{$to_user_name}]]></ToUserName>
-
-<FromUserName><![CDATA[{$from_user_name}]]></FromUserName>
-
-<CreateTime>{$create_time}</CreateTime>
-
-<MsgType><![CDATA[{$msg_type}]]></MsgType>
-
-<Content><![CDATA[{$content}]]></Content>
-
-</xml>";
+       $send = sprintf($send, $to_user_name, $from_user_name, $create_time, $msg_type, $content);
 
 		echo $send;
 		// echo "success";
