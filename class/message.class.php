@@ -48,7 +48,7 @@ class message
 		$from_user_name = $xml->FromUserName;
 		$create_time = time();
 		$msg_type = 'text';
-		$content = '感谢您的关注\^_^/';
+		$content = '感谢您的关注';
 
 		$send = "<xml> 
        <ToUserName><![CDATA[%s]]></ToUserName> 
