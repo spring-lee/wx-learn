@@ -58,7 +58,7 @@ class message
        <Content><![CDATA[%s]]></Content> 
        </xml>";
 
-       $send = sprintf($send, $to_user_name, $from_user_name, $create_time, $msg_type, $content);
+       $send = sprintf($send, $from_user_name, $to_user_name, $create_time, $msg_type, $content);
 
 		echo $send;
 		// echo "success";
