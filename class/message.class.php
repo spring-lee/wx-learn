@@ -53,7 +53,7 @@ class message
         <CreateTime>{$create_time}</CreateTime> 
         <MsgType><![CDATA[{$msg_type}]]></MsgType> 
         <Content><![CDATA[{$content}]]></Content> 
-        </xml>"
+        </xml>";
 
 		echo $send;
 	}
