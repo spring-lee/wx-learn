@@ -31,6 +31,9 @@ class message
 						break;
 				}
 				break;
+			case 'text':
+				$this->subscribe();
+				break;
 		}
 	}
 
@@ -46,15 +49,14 @@ class message
 		$msg_type = 'text';
 		$content = '感谢您的关注\^_^/';
 
-		$send = <<<EOT
-		<xml>
+		$send = "<xml>
 		<ToUserName><![CDATA[{$to_user_name}]]></ToUserName>
 		<FromUserName><![CDATA[{$from_user_name}]]></FromUserName>
 		<CreateTime>{$create_time}</CreateTime>
 		<MsgType><![CDATA[{$msg_type}]]></MsgType>
 		<Content><![CDATA[{$content}]]></Content>
-		</xml>
-EOT;
+		</xml>";
+
 		echo $send;
 	}
 }
