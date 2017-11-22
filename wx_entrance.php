@@ -26,7 +26,6 @@ require_once('auto_load.php');
 $xml_str = file_get_contents('php://input');
 $xml = simplexml_load_string($xml_str);
 
-echo 'success';
 /*业务分流处理*/
-// $new_msg = new message($xml);
-// $new_msg->feedback();
+$new_msg = new message($xml);
+$new_msg->feedback();

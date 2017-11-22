@@ -7,7 +7,7 @@ class message
 	private $xml; //xml数据
 	private $type; //消息类型
 
-	public function __construct($xml);
+	public function __construct($xml)
 	{
 		$this->xml = $xml;
 		$this->type = $xml->MsgType;
@@ -30,9 +30,6 @@ class message
 						$this->subscribe();
 						break;
 				}
-				break;
-			case 'text':
-				echo "success";
 				break;
 		}
 	}
