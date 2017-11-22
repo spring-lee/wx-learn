@@ -31,10 +31,6 @@ class message
 						break;
 				}
 				break;
-			case 'text':
-				$this->subscribe();
-				// echo "success";
-				break;
 		}
 	}
 
@@ -48,19 +44,18 @@ class message
 		$from_user_name = $xml->FromUserName;
 		$create_time = time();
 		$msg_type = 'text';
-		$content = '感谢您的关注';
+		$content = '感谢您的关注\^_^/';
 
-		$send = "<xml> 
-       <ToUserName><![CDATA[%s]]></ToUserName> 
-       <FromUserName><![CDATA[%s]]></FromUserName> 
-       <CreateTime>%s</CreateTime> 
-       <MsgType><![CDATA[%s]]></MsgType> 
-       <Content><![CDATA[%s]]></Content> 
-       </xml>";
-
-       $send = sprintf($send, $from_user_name, $to_user_name, $create_time, $msg_type, $content);
+		$send = <<<EOT 
+	    <xml> 
+        <ToUserName><![CDATA[{$from_user_name}]]></ToUserName> 
+        <FromUserName><![CDATA[{$to_user_name}]]></FromUserName> 
+        <CreateTime>{$create_time}</CreateTime> 
+        <MsgType><![CDATA[{$msg_type}]]></MsgType> 
+        <Content><![CDATA[{$content}]]></Content> 
+        </xml>
+EOT;
 
 		echo $send;
-		// echo "success";
 	}
 }
