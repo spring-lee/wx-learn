@@ -51,8 +51,8 @@ class message
 		<ToUserName><![CDATA[{$to_user_name}]]></ToUserName>
 		<FromUserName><![CDATA[{$from_user_name}]]></FromUserName>
 		<CreateTime>{$create_time}</CreateTime>
-		<MsgType>{$msg_type}</MsgType>
-		<Content>{$content}</Content>
+		<MsgType><![CDATA[{$msg_type}]]></MsgType>
+		<Content><![CDATA[{$content}]]></Content>
 		</xml>
 EOT;
 		echo $send;
