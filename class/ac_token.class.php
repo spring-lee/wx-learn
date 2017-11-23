@@ -2,6 +2,8 @@
 /**
 * access_token类
 */
+require_once(dirname(dirname(__FILE__)).'/config.php');
+
 class ac_token
 {
 	/**
