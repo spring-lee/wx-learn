@@ -6,17 +6,7 @@ $data = array(
 				array(
 					'type'=>'view',
 					'name'=>'testLink1',
-					'url'=>'http://www.baidu.com/'
-				),
-				array(
-					'type'=>'view',
-					'name'=>'testLink2',
-					'url'=>'http://www.baidu.com/'
-				),
-				array(
-					'type'=>'view',
-					'name'=>'testLink3',
-					'url'=>'http://www.baidu.com/'
+					'url'=>'http://www.qq.com/'
 				)
 			)
 	);

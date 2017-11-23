@@ -1,0 +1,94 @@
+html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body{
+	min-width: 1200px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+
+	background-color: #008B8B;
+}
+
+.clear-float{
+	clear: both;
+}
+
+header{
+	background-color: #FFFFFF;
+}
+.head{
+	width: 1200px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+.siteName{
+	padding: 0;
+	margin: 0;
+
+	color: #008B8B;
+}
+
+.body{
+	width: 1200px;
+	margin: 20px auto;
+}
+
+.nav{
+	width: 290px;
+
+	float: left;
+
+	background-color: #FFFFFF;
+}
+.nav ul{
+	padding: 0;
+	margin: 0;
+
+	list-style: none;
+}
+.nav ul li.unit{
+	height: 30px;
+	padding: 10px 10px 10px 30px;
+	margin: 0;
+
+	line-height: 30px;
+	font-size: 1.1em;
+	letter-spacing: 2px;
+}
+.nav ul li.unit a{
+	color: #008B8B;
+	text-decoration: none;
+}
+.nav ul li.wall hr{
+	padding: 0;
+	margin: 0 15px;
+
+	border-color: #008B8B;
+}
+.active{
+	display: block;
+	
+	height: 30px;
+	padding: 0;
+	margin: 0 5px 0 0;
+
+	float: right;
+
+	line-height: 30px;
+	color: #008B8B;
+}
+
+.content{
+	width: 870px;
+	padding: 10px;
+
+	float: right;
+
+	background-color: #FFFFFF;
+}
+.path{
+	color: #B0B0B0;
+}
