@@ -85,14 +85,14 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 				if ($need_num>=$option_num) {
 					$this->error('那就是全都选咯o_O');
 				}else{
+					$rate_count = 0;
 					foreach ($exp as $key=>$option) {
 						$exp_o = explode(':', $option ,2);
 						$rate = isset($exp_o[1])?$exp_o:1;
-						$rate_count = 0;
 						if (is_numeric($rate)) {
-							$rate_count += $exp_o[1];
+							$rate_count += $rate;
 							$exp[$key]['name'] = $exp_o[0];
-							$exp[$key]['rate'] = $exp_o[1];
+							$exp[$key]['rate'] = $rate;
 						}else{
 							$this->error('格式不对哦@_@');
 							exit();
