@@ -94,7 +94,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 							$rate_count += $rate;
 							$exp[$key]['name'] = $exp_o[0];
 							$exp[$key]['rate'] = $rate;
-							$rst .= $$exp[$key]['name'];
+							$rst .= $exp[$key]['name'];
 						}else{
 							$this->error('格式不对哦@_@');
 							exit();
