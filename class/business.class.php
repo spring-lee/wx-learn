@@ -22,5 +22,6 @@ class business
         		<MsgType><![CDATA[{$type}]]></MsgType> 
         		<Content><![CDATA[{$content}]]></Content> 
         		</xml>";
+        echo $send;
 	}
 }
