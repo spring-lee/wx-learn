@@ -26,15 +26,20 @@ class message
 		/*按消息类型分发处理*/
 		switch ($msg_type) {
 			case 'event': //事件
+				$client = $xml->FromUserName;
+				$service = $xml->ToUserName;
+				$business = new business($client, $service);
+				
 				/*按事件类型分发处理*/
 				switch ($xml->Event) {
 					case 'subscribe': //订阅
-						$client = $xml->FromUserName;
-						$service = $xml->ToUserName;
-						business::welcome($client, $service);
+						$business->welcome();
 						break;
 					case 'click': //自定义菜单click
 						$key = $xml->EventKey;
+						$func_name = 'c_'.$key;
+
+						$business->$func_name();
 						break;
 				}
 				break;
