@@ -92,8 +92,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 						$rate = isset($exp_o[1])?$exp_o[1]:1;
 						if (is_numeric($rate)) {
 							$rate_count += $rate;
-							$exp[$key] = array('name'=>$exp_o[0]);
-							$exp[$key] = array('rate'=>$rate);
+							$exp[$key] = array('name'=>$exp_o[0], 'rate'=>$rate);
 						}else{
 							$this->error('格式不对哦@_@');
 							exit();
@@ -104,7 +103,6 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rst = null;
 					foreach ($exp as $option) {
 						$dobber += round(100/$rate_count*$option['rate']);
-						$rst .= $option['name'];
 						if ($rand<=$dobber) {
 							$rst = $option['name'];
 							break;
