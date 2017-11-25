@@ -11,4 +11,4 @@ $data = array(
 				)
 			)
 	);
-menu::set_menu(json_encode($data));
+menu::set_menu(json_encode($data, JSON_UNESCAPED_UNICODE));
