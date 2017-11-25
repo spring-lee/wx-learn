@@ -88,18 +88,17 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rate_count = 0;
 					$rst = null;
 					foreach ($exp as $key=>$option) {
-						
 						$exp_o = explode(':', $option, 2);
-						$rst .= $exp_o[0];
-						// $rate = isset($exp_o[1])?$exp_o[1]:1;
-						// if (is_numeric($rate)) {
-						// 	$rate_count += $rate;
-						// 	$exp[$key]['name'] = $exp_o[0];
-						// 	$exp[$key]['rate'] = $rate;
-						// }else{
-						// 	$this->error('格式不对哦@_@');
-						// 	exit();
-						// }
+						$rate = isset($exp_o[1])?$exp_o[1]:1;
+						if (is_numeric($rate)) {
+							$rate_count += $rate;
+							$exp[$key]['name'] = $exp_o[0];
+							$exp[$key]['rate'] = $rate;
+							$rst .= $$exp[$key]['name'];
+						}else{
+							$this->error('格式不对哦@_@');
+							exit();
+						}
 					}
 					// $rand = rand(1, 100);
 					// $dobber = 0;
