@@ -68,7 +68,7 @@ header{
 
 	border-color: #008B8B;
 }
-.active{
+.nav .active{
 	display: block;
 	
 	height: 30px;
@@ -82,7 +82,7 @@ header{
 }
 
 .content{
-	width: 870px;
+	width: 870px; 
 	padding: 10px;
 
 	float: right;

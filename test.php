@@ -1,12 +1,13 @@
 <?php 
 require_once('auto_load.php');
+require_once('config.php');
 
 $data = array(
 		'button'=>array(
 				array(
-					'type'=>'view',
-					'name'=>'testLink1',
-					'url'=>'http://www.qq.com/'
+					'type'=>'click',
+					'name'=>'选择困难',
+					'key'=>'choister'
 				)
 			)
 	);

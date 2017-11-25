@@ -2,6 +2,8 @@
 /**
 * 消息类
 */
+require_once(dirname(dirname(__FILE__)).'/auto_load.php');
+
 class message
 {
 	private $xml; //xml数据
@@ -27,34 +29,15 @@ class message
 				/*按事件类型分发处理*/
 				switch ($xml->Event) {
 					case 'subscribe': //订阅
-						$this->subscribe();
+						$client = $xml->FromUserName;
+						$service = $xml->ToUserName;
+						business::welcome($client, $service);
+						break;
+					case 'click': //自定义菜单click
+						$key = $xml->EventKey;
 						break;
 				}
 				break;
 		}
-	}
-
-	/**
-	 * 订阅回复欢迎语
-	 */
-	private function subscribe()
-	{
-		$xml = $this->xml;
-		$to_user_name = $xml->ToUserName;
-		$from_user_name = $xml->FromUserName;
-		$create_time = time();
-		$msg_type = 'text';
-		$content = '感谢您的关注\^_^/';
-
-		$send = "
-	    <xml> 
-        <ToUserName><![CDATA[{$from_user_name}]]></ToUserName> 
-        <FromUserName><![CDATA[{$to_user_name}]]></FromUserName> 
-        <CreateTime>{$create_time}</CreateTime> 
-        <MsgType><![CDATA[{$msg_type}]]></MsgType> 
-        <Content><![CDATA[{$content}]]></Content> 
-        </xml>";
-
-		echo $send;
 	}
 }

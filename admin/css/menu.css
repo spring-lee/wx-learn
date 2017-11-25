@@ -1,0 +1,80 @@
+.top-level-s{
+	margin: 10px 0;
+}
+.top-level-s button{
+	width: 140px;
+	height: 60px;
+	padding: 0;
+	margin: 0 20px 0 0;
+
+	background-color: #FFFFFF;
+	border: 1px #B0B0B0 solid;
+	outline: none;
+
+	cursor: pointer;
+}
+.top-level-s .tit span{
+	color: #B0B0B0;
+}
+.top-level-s .edit-flag{
+	color: #008B8B;
+}
+.top-level-s .hidden{
+	display: none;
+}
+
+.top-level-c{
+	min-height: 300px;
+	padding: 10px;
+
+	border: 1px #B0B0B0 solid;
+}
+.top-level-c .tmn-group{
+	height: 30px;
+	margin-right: 20px;
+
+	float: left;
+}
+.top-level-c .tmn-group label{
+	display: block;
+	height: 30px;
+	margin-right: 5px;
+
+	float: left;
+
+	line-height: 30px;
+}
+.top-level-c .tmn-group input{
+	box-sizing: content-box;
+	width: 200px;
+	height: 28px;
+	padding: 0 10px;
+
+	border: 1px #B0B0B0 solid;
+
+	line-height: 28px;
+}
+.top-level-c .tmt-group{
+	height: 30px;
+
+	float: left;
+}
+.top-level-c .tmt-group label{
+	display: block;
+	height: 30px;
+	margin-right: 5px;
+
+	float: left;
+
+	line-height: 30px;
+}
+.top-level-c .tmt-group select{
+	box-sizing: content-box;
+	width: 100px;
+	height: 28px;
+	padding: 0 10px;
+
+	border: 1px #B0B0B0 solid;
+
+	line-height: 28px;
+}
