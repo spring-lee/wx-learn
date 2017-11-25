@@ -90,7 +90,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 						$rate = isset($exp_o[1])?$exp_o:1;
 						$rate_count = 0;
 						if (is_numeric($rate)) {
-							$rate_count += $rate_count;
+							$rate_count += $exp_o[1];
 							$exp[$key]['name'] = $exp_o[0];
 							$exp[$key]['rate'] = $exp_o[1];
 						}else{
