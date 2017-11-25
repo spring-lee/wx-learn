@@ -88,8 +88,9 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rate_count = 0;
 					$rst = null;
 					foreach ($exp as $key=>$option) {
-						$rst .= $option;
-						// $exp_o = explode(':', $option, 2);
+						
+						$exp_o = explode(':', $option, 2);
+						$rst .= $exp_o[0];
 						// $rate = isset($exp_o[1])?$exp_o[1]:1;
 						// if (is_numeric($rate)) {
 						// 	$rate_count += $rate;
