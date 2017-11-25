@@ -103,10 +103,11 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rst = null;
 					foreach ($exp as $option) {
 						$dobber += round(100/$rate_count*$option['rate']);
-						if ($rand<=$dobber) {
-							$rst = $option['name'];
-							break;
-						}
+						$rst .= $option['name'];
+						// if ($rand<=$dobber) {
+						// 	$rst = $option['name'];
+						// 	break;
+						// }
 					}
 
 					/*发送结果*/
@@ -115,7 +116,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$time = time();
 					$type = 'text';
 					// $content = '那就选 '.$rst.' 吧';
-					$content = var_dump($exp);
+					$content = $rst;
 
 					$send = "<xml> 
 			        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
