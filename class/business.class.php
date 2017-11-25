@@ -64,4 +64,94 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
         		</xml>";
         echo $send;
 	}
+
+	/**
+	 * 选择困难-业务处理
+	 * @param string $data 业务数据
+	 */
+	public function choister($data)
+	{
+		/*业务数据状态*/
+		if ($data) { //有
+			$exp = explode('#', $data);
+			$need_num = isset($exp[1])?$exp[1]:false;
+			if (is_numeric($need_num)) {
+				$exp = explode('/', $exp[0]);
+				$option_num = sizeof($exp);
+				if ($option_num==1) {
+					$this->error('那就是没得选咯o_O');
+					exit();
+				}
+				if ($need_num>=$option_num) {
+					$this->error('那就是全都选咯o_O');
+				}else{
+					foreach ($exp as $key=>$option) {
+						$exp_o = explode(':', $option ,2);
+						$rate = isset($exp_o[1])?$exp_o:1;
+						$rate_count = 0;
+						if (is_numeric($rate)) {
+							$rate_count += $rate_count;
+							$exp[$key]['name'] = $exp_o[0];
+							$exp[$key]['rate'] = $exp_o[1];
+						}else{
+							$this->error('格式不对哦@_@');
+							exit();
+						}
+					}
+					$rand = rand(1, 100);
+					$dobber = 0;
+					$rst = null;
+					foreach ($exp as $key => $option) {
+						$dobber += round(100/$rate_count*$option['rate']);
+						if ($rand<=$dobber) {
+							$rst = $option['name'];
+							break;
+						}
+					}
+
+					/*发送结果*/
+					$client = $this->client;
+					$service = $this->service;
+					$time = time();
+					$type = 'text';
+					$content = '那就选 '.$rst.' 吧';
+
+					$send = "<xml> 
+			        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
+			        		<FromUserName><![CDATA[{$service}]]></FromUserName> 
+			        		<CreateTime>{$time}</CreateTime> 
+			        		<MsgType><![CDATA[{$type}]]></MsgType> 
+			        		<Content><![CDATA[{$content}]]></Content> 
+			        		</xml>";
+			        echo $send;
+				}
+			}else{
+				$this->error('格式不对哦@_@');
+			}
+		}else{ //无
+			$this->error('格式不对哦@_@');
+		}
+	}
+
+	/**
+	 * 错误处理
+	 * @param string $msg 错误信息
+	 */
+	private function error($msg)
+	{
+		$client = $this->client;
+		$service = $this->service;
+		$time = time();
+		$type = 'text';
+		$content = $msg;
+
+		$send = "<xml> 
+        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
+        		<FromUserName><![CDATA[{$service}]]></FromUserName> 
+        		<CreateTime>{$time}</CreateTime> 
+        		<MsgType><![CDATA[{$type}]]></MsgType> 
+        		<Content><![CDATA[{$content}]]></Content> 
+        		</xml>";
+        echo $send;
+	}
 }

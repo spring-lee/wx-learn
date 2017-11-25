@@ -26,11 +26,12 @@ class message
 		/*按消息类型分发处理*/
 		switch ($msg_type) {
 			case 'event': //事件
+				/*初始化业务*/
 				$client = $xml->FromUserName;
 				$service = $xml->ToUserName;
 				$business = new business($client, $service);
 
-				/*按事件类型分发处理*/
+				/*按事件类型分发业务*/
 				switch ($xml->Event) {
 					case 'subscribe': //订阅
 						$business->welcome();
@@ -38,10 +39,31 @@ class message
 					case 'CLICK': //自定义菜单click
 						$key = $xml->EventKey;
 						$func_name = 'c_'.$key;
-
 						$business->$func_name();
 						break;
 				}
+				break;
+			case 'text': //文本
+				/*初始化业务*/
+				$client = $xml->FromUserName;
+				$service = $xml->ToUserName;
+				$business = new business($client, $service);
+
+				/*文本分析分发业务*/
+				$content = trim($xml->Content);
+				$exp = explode('+', $content ,2);
+				$data = isset($exp[1])?$exp[1]:false;
+				switch ($exp[0]) {
+					case 'xzkn': //选择困难
+						$business->choister($data);
+						break;
+					default: //其他
+						echo "success";
+						break;
+				}
+				$client = $xml->FromUserName;
+				$service = $xml->ToUserName;
+				$business = new business($client, $service);
 				break;
 		}
 	}
