@@ -29,13 +29,13 @@ class message
 				$client = $xml->FromUserName;
 				$service = $xml->ToUserName;
 				$business = new business($client, $service);
-				
+
 				/*按事件类型分发处理*/
 				switch ($xml->Event) {
 					case 'subscribe': //订阅
 						$business->welcome();
 						break;
-					case 'click': //自定义菜单click
+					case 'CLICK': //自定义菜单click
 						$key = $xml->EventKey;
 						$func_name = 'c_'.$key;
 
