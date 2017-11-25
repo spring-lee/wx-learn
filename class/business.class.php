@@ -88,7 +88,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rate_count = 0;
 					foreach ($exp as $key=>$option) {
 						$exp_o = explode(':', $option ,2);
-						$rate = isset($exp_o[1])?$exp_o:1;
+						$rate = isset($exp_o[1])?$exp_o[1]:1;
 						if (is_numeric($rate)) {
 							$rate_count += $rate;
 							$exp[$key]['name'] = $exp_o[0];
@@ -101,7 +101,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$rand = rand(1, 100);
 					$dobber = 0;
 					$rst = null;
-					foreach ($exp as $key => $option) {
+					foreach ($exp as $option) {
 						$dobber += round(100/$rate_count*$option['rate']);
 						if ($rand<=$dobber) {
 							$rst = $option['name'];
@@ -114,7 +114,8 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$service = $this->service;
 					$time = time();
 					$type = 'text';
-					$content = '那就选 '.$rst.' 吧';
+					// $content = '那就选 '.$rst.' 吧';
+					$content = var_dump($exp);
 
 					$send = "<xml> 
 			        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
