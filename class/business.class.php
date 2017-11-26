@@ -76,6 +76,9 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 			$exp = explode('#', $data);
 			$need_num = isset($exp[1])?$exp[1]:false;
 			if (is_numeric($need_num)) {
+				if (strpos($need_num, '.')!==false||$need_num==0) {
+					$this->error('选'.$need_num.'个,这。。。就触及到我的知识盲区了吖@_@!');
+				}
 				$exp = explode('/', $exp[0]);
 				$option_num = sizeof($exp);
 				if ($option_num==1) {
@@ -102,7 +105,6 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 						foreach ($exp as $key => $option) {
 							$rate_count += $option['rate'];
 						}
-						
 						$rand = rand(1, 100);
 						$dobber = 0;
 						foreach ($exp as $key => $option) {
