@@ -111,7 +111,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 						}
 						$need_num --;
 					}
-					$content = json_encode($rst);
+					$content = json_encode($exp);
 					/*发送结果*/
 					$client = $this->client;
 					$service = $this->service;
