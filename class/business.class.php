@@ -120,7 +120,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					foreach ($rst as $v) {
 						$content .= $v.' ';
 					}
-					$content = '吧~';
+					$content .= '吧~';
 
 					$send = "<xml> 
 			        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
