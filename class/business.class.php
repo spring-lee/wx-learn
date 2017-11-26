@@ -86,7 +86,7 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 					$this->error('那就是全都选咯o_O');
 				}else{
 					$rst = array();
-					while ($need_num==0) {
+					while ($need_num>0) {
 						$rate_count = 0;
 						foreach ($exp as $key=>$option) {
 							$exp_o = explode(':', $option, 2);
@@ -111,17 +111,16 @@ xzkn+选项1:倍率/选项2:倍率#选择个数
 						}
 						$need_num --;
 					}
-					$content = json_encode($exp);
 					/*发送结果*/
 					$client = $this->client;
 					$service = $this->service;
 					$time = time();
 					$type = 'text';
-					// $content = '那就选 ';
-					// foreach ($rst as $v) {
-					// 	$content .= $v.' ';
-					// }
-					// $content .= '吧~';
+					$content = '那就选 ';
+					foreach ($rst as $v) {
+						$content .= $v.' ';
+					}
+					$content .= '吧~';
 
 					$send = "<xml> 
 			        		<ToUserName><![CDATA[{$client}]]></ToUserName> 
