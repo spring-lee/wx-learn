@@ -23,7 +23,7 @@ require_once('config.php');
 		// 初始化curl
 		$curl = curl_init();
 		// 设置curl选项
-		curl_setopt($curl, CURLOPT_URL, 'https://api.weixin.qq.com/cgi-bin/menu/get_current_selfmenu_info?access_token='.$token);
+		curl_setopt($curl, CURLOPT_URL, 'https://api.weixin.qq.com/cgi-bin/get_current_selfmenu_info?access_token='.$token);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 		// 执行curl
 		$menu = curl_exec($curl);
