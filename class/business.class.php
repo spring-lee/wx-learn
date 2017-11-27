@@ -49,11 +49,12 @@ class business
 		$service = $this->service;
 		$time = time();
 		$type = 'text';
-		$content = "被选择困难症困扰的你,就由我来解救!像这样告诉我选择池,我就把答案捞给你哟~
+		$content = "像这样告诉我备选项,我可以帮你选择哟~
 
 xzkn+选项1:倍率/选项2:倍率#选择个数
+例如：xzkn+苹果:2/橘子/香蕉:3#1
 
-不告诉我倍率时我默认为1哦";
+不告诉我倍率时默认为1哦";
 
 		$send = "<xml> 
         		<ToUserName><![CDATA[{$client}]]></ToUserName> 
