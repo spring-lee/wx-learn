@@ -15,7 +15,7 @@ $data = array(
 						array(
 							'type'=>'view',
 							'name'=>'我的简历',
-							'url'=>'http://'.DOMAIN_NAME.ROOT_PATH.'/my_resume.php';
+							'url'=>'http://'.DOMAIN_NAME.ROOT_PATH.'/my_resume.php'
 						)
 					)
 				)
