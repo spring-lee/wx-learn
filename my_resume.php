@@ -5,6 +5,7 @@
 	<title>spring`s resume</title>
 	<style>
 		body{
+			min-width: 1200px;
 			height: 100%;
 			background-color: #008B8B;
 		}
