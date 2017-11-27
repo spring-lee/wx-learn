@@ -208,6 +208,7 @@
 				<div class="float-clear"></div>
 				<img src="0.jfif" alt="my wechat public accounts" class="QRcode">
 				<p class="QRcode-info">最近学习微信开发做的公众号测试号，开发中...</p>
+				<p class="QRcode-info">代码托管于 <a href="https://github.com/spring-lee/wx-learn">https://github.com/spring-lee/wx-learn</a></p>
 				<div class="float-clear"></div>
 			</div>
 		</div>
