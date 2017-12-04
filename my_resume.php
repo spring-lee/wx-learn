@@ -139,8 +139,8 @@
 			<div class="base-info-right">
 				<p>求职岗位：PHP工程师</p>
 				<hr>
-				<p class="something">热爱编程，热爱生活。坚信技术改变生活，改变世界。乐意不断地学习、接受新技术</p>
-				<p class="something">行寻求一份自己喜欢工作，为自己热爱的行业做出一点贡献。</p>
+				<p class="something">热爱编程，热爱生活。坚信技术改变生活，改变世界。乐意不断地学习和接受新鲜事物</p>
+				<p class="something">寻求一份自己喜欢工作，为自己热爱的行业做出一点贡献。</p>
 			</div>	
 			<div class="float-clear"></div>		
 		</div>
@@ -154,20 +154,20 @@
 			<div class="education-content">
 				<div class="title"><h1>教育经历</h1></div>
 				<div class="float-clear"></div>
-				<p>时间：2012.09 - 2017.07</p>
+				<p>时间：2013.09 - 2017.07</p>
 				<p>院校：西安邮电大学</p>
 				<p>专业：信息安全</p>
 			</div>
 			<div class="work-content">
 				<div class="title"><h1>工作经历</h1></div>
 				<div class="float-clear"></div>
-				<p>时间：2015.06 - 2016.05</p>
+				<p>时间：2016.06 - 2017.05</p>
 				<p>地点：西安安盟科技有限公司</p>
 				<p>岗位：PHP工程师</p>
 				<div class="title"><h1>项目经验</h1></div>
 				<div class="float-clear"></div>
 				<p>项目名称：大型仪器设备共享管理系统</p>
-				<p>项目时间：2015.06 - 2015.09</p>
+				<p>项目时间：2016.06 - 2016.09</p>
 				<p>项目描述：</p>
 				<p class="item-des">
 					整合高校实验室与大型仪器信息，对处于空闲时间的资源提供外借，以提高利用率，并便于师生教育与学习。
@@ -182,7 +182,7 @@
 				</p>
 				<hr>
 				<p>项目名称：高校教务综合管理系统</p>
-				<p>项目时间：2015.09 - 2016.05</p>
+				<p>项目时间：2016.09 - 2017.05</p>
 				<p>项目描述：</p>
 				<p class="item-des">
 					该项目是对现有高校机教务工作的信息共享化的线上管理系统。有助于高校教务工作的进行，并连同各个部门信息，实现信息一体化。 <br>
@@ -208,12 +208,11 @@
 				<div class="title"><h1>作品</h1></div>
 				<div class="float-clear"></div>
 				<img src="0.jfif" alt="my wechat public accounts" class="QRcode">
-				<p class="QRcode-info">最近学习微信开发做的公众号测试号，开发中...</p>
+				<p class="QRcode-info">学习微信开发所做公众号测试号，持续开发中...</p>
 				<p class="QRcode-info">代码托管于 <a href="https://github.com/spring-lee/wx-learn">https://github.com/spring-lee/wx-learn</a></p>
 				<div class="float-clear"></div>
 			</div>
-		</div>
-		
+		</div>		
 	</div>
 </body>
 </html>
